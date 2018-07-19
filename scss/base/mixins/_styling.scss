@@ -1,0 +1,31 @@
+@mixin fw($fs, $fw) {
+	font-size: $fs;
+	font-weight: $fw;
+}
+
+@mixin fl($fs, $fl) {
+	font-size: $fs;
+	line-height: $fl;
+}
+
+@mixin antialias {
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin appearance($val: none) {
+	-webkit-appearance: $val;
+	-moz-appearance: $val;
+	appearance: $val;
+}
+
+@mixin selection {
+	::-moz-selection { @content; }
+	::selection { @content; }
+}
+
+@mixin unselectable {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
