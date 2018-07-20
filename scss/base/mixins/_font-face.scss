@@ -9,6 +9,7 @@
 		     url('#{$path}.woff2') format('woff2'),
 		     url('#{$path}.woff') format('woff'),
 		     url('#{$path}.ttf') format('truetype'),
-		     url('#{$path}.svg##{$title}') format('svg');
+		     url('#{$path}.svg##{$font-family}') format('svg');
 	}
 }
+

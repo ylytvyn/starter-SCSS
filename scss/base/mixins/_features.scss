@@ -13,14 +13,12 @@
     &::-webkit-input-placeholder { @content; }
 }
 
-@mixin triangle($color, $direction, $size: 6px,$round: false) {
+@mixin triangle($color, $size, $direction) {
     content: '';
     position: absolute;
     width: 0;
     height: 0;
-    @if $round {
-        border-radius: 3px;
-    }
+
     @if $direction == down {
         border-left: $size solid transparent;
         border-right: $size solid transparent;
@@ -44,3 +42,8 @@
     }
 }
 
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}

@@ -1,11 +1,17 @@
-@mixin fw($fs, $fw) {
-	font-size: $fs;
-	font-weight: $fw;
+@function calculateRem($size) {
+  $remSize: $size / 16px; //Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
 }
 
-@mixin fl($fs, $fl) {
+@mixin font($fs, $fw: false, $fl: false) {
 	font-size: $fs;
-	line-height: $fl;
+	font-size: calculateRem($fs);
+	@if $fw {
+		font-weight: $fw;
+	}
+	@if $fl {
+		line-height: $fl;
+	}
 }
 
 @mixin antialias {

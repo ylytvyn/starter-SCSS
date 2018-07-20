@@ -1,5 +1,5 @@
-@mixin pos($pos, $t, $r, $b, $l, $z: false) {
-	@if $pos { position: $pos; }
+@mixin pos($pos: absolute, $t, $r, $b, $l, $z: false) {
+	position: $pos;
 	@if $t { top: $t; }
 	@if $r { right: $r; }
 	@if $b { bottom: $b; }
@@ -12,20 +12,20 @@
 	height: $heigth;
 }
 
-@mixin align($vertical: true, $horizontal: false, $position: relative) {
-	@if $position {
-		position: $position;
+@mixin align($vert: true, $hor: false, $pos: relative) {
+	@if $pos {
+		position: $pos;
 	}
-	@if $vertical {
+	@if $vert {
 		top: 50%;
 	}
-	@if $horizontal {
+	@if $hor {
 		left: 50%;
 	}
 
-	@if $vertical and $horizontal {
+	@if $vert and $hor {
 		transform: translateX(-50%) translateY(-50%);
-	} @else if $vertical {
+	} @else if $vert {
 		transform: translateY(-50%);
 	} @else {
 		transform: translateX(-50%);
