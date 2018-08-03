@@ -1,4 +1,4 @@
-@mixin pos($pos: absolute, $t, $r, $b, $l, $z: false) {
+@mixin pos($pos: absolute, $t: false, $r: false, $b: false, $l: false, $z: false) {
 	position: $pos;
 	@if $t { top: $t; }
 	@if $r { right: $r; }

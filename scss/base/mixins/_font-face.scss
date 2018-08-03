@@ -1,15 +1,14 @@
-@mixin font-face($font-family, $path, $weight: normal, $style: normal) {
+@mixin font-face($font-family, $path, $weight: normal, $style: normal, $ver: '') {
 	@font-face {
 		font-family: $font-family;
 		font-weight: $weight;
 		font-style: $style;
 
-		src: url('#{$path}.eot');
+		src: url('#{$path}.eot#{$ver}');
 		src: url('#{$path}.eot?#iefix') format('embedded-opentype'),
-		     url('#{$path}.woff2') format('woff2'),
-		     url('#{$path}.woff') format('woff'),
-		     url('#{$path}.ttf') format('truetype'),
-		     url('#{$path}.svg##{$font-family}') format('svg');
+		     url('#{$path}.woff2#{$ver}') format('woff2'),
+		     url('#{$path}.woff#{$ver}') format('woff'),
+		     url('#{$path}.ttf#{$ver}') format('truetype'),
+		     url('#{$path}.svg#{$ver}##{$font-family}') format('svg');
 	}
 }
-
