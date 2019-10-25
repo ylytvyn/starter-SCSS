@@ -10,4 +10,8 @@ Add new setting: File -> Preferences -> Settings -> Live Sass Compiler <br/>
         "extensionName": ".min.css",
         "savePath": "/css"
     }
+],
+"liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
 ]*
