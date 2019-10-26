@@ -1,5 +1,5 @@
 # Starter for SCSS
-sass --watch scss/global.scss:css/styles.min.css --style compressed
+sass --watch scss/styles.scss:css/styles.min.css --style compressed
 
 ## Visual Studio Code
 Add Extension: **Live Sass Compiler** <br/>
